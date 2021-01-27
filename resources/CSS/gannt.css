@@ -41,8 +41,8 @@ a {
 }
 
 .chart-wrapper .chart-values li {
-  flex: 1;
-  min-width: 80px;
+  flex: 1 1;
+  min-width: 40px;
   text-align: center;
 }
 
@@ -75,8 +75,20 @@ a {
 
 @media screen and (max-width: 600px) {
   .chart-wrapper .chart-bars li {
-    padding: 10px;
+    padding: 5px;
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .chart-wrapper .chart-bars li {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .chart-wrapper .chart-values li {
+    font-size: 12px;
+    min-width: 30px;
+  }
+
+}
 
