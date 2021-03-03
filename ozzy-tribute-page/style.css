@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color: hsl(10,0%,90%);
+    line-height: 1.5;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  header {
+    background: hsl(10,0%,10%);
+    text-align: center;
+    padding: 50px 0px;
+  }
+  
+  header h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-family: 'Rock Salt', cursive;
+    margin-bottom: 20px;
+  }
+  
+  header h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-style: italic;
+    font-family: 'Rock Salt', cursive;
+  }
+  
+  main {
+    background-color: hsl(10,0%,20%); 
+  }
+  
+  #img-div {
+    width: 100vw;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  
+  #image {
+  padding-bottom: 1rem;
+  width: 100%;
+  /*margin: 20px auto 20px auto ;*/
+  display: block;
+    }
+  
+  figcaption {
+    text-align: center;
+  }
+  
+  #info {
+    background: hsl(10,0%,10%);
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    padding: 10px;
+  }
+  
+  #tribute-info {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: hsl(10,0%,20%); 
+    padding: 20px;
+  }
