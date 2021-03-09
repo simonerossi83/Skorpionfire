@@ -55,7 +55,7 @@ var tagCloud = TagCloud('.content', myTags,{
 
 // radius in px
 
-radius: 300,
+radius: 250,
 
 // animation speed
 // slow, normal, fast
@@ -77,7 +77,7 @@ keep: true
 
   var options = {
     series: [{
-    data: [10,10,10,9,8.5,8,7,7,7,6.5,6,6,6,5,5],
+    data: [10,10,10,9,8.5,8,7,7,7,6.5,6,6,6,5,5,4],
     name: 'Tech skills'
   }],
   tooltip: {
@@ -113,10 +113,21 @@ keep: true
   
   xaxis: {
     categories: ['Office 365', 'G-Suite', 'Windows', 'Mac OS','2D CAD', 'MatLab', 'HTML', 'CSS',
-      'LaTeX', 'Photoshop', 'Python', 'Tableau', 'SQL', 'Git','Linux'
+      'LaTeX', 'Photoshop', 'Python', 'Tableau', 'SQL', 'React', 'Git','Linux'
     ],
-    labels: {show: false}
+    labels: {show: false},
+    style: {
+      fontFamily: 'Amatic SC'
+    }
+  },
+
+  yaxis: {
+    
+    style: {
+      fontFamily: 'Amatic SC'
+    }
   }
+
   };
   
 
