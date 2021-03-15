@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Shadows Into Light', cursive;
+  background-color: hsl(0,0%,0%);
+  color: hsl(0,100%,50%);
+}
+
+header {
+  background-color: hsl(0,20%,2%);
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+  position: fixed;
+  margin: 0px 0px 0px 0px;
+  width: 100vw;
+}
+
+#header-img {
+  max-width: 100px;
+  float: left;
+  margin: 10px;
+}
+
+
+h1 {
+font-family: 'Walter Turncoat', cursive;
+  color: hsl(0,100%,50%);
+  font-size: 40px;
+}
+nav ul {
+  list-style-type: none;
+  }
+
+nav ul li {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+#features li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+
+#features ul li {
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.nav-link:link {
+  text-decoration: none;
+  color: hsl(0,100%,50%);
+}
+
+.nav-link:hover {
+  color: hsl(0,80%,30%);
+}
+
+#video {
+  width: 20%;
+  margin: 30px auto;
+  }
+
+h2 {
+  font-size: 3rem;
+  }
+
+
+p, label {
+  font-size: 2rem;
+}
+
+section {
+  text-align: center;
+
+}
+
+section h2 {
+  margin-bottom: 20px;
+  background-color: hsla(0,60%,30%,0.6);
+}
+
+input {
+  padding: 10px;
+  vertical-align: text-bottom;
+  width: 200px;
+  background: hsl(0,30%,30%);
+}
+
+
+form {
+  padding: 20px;
+  margin: 20px auto;
+ }
+
+form input::-webkit-input-placeholder {
+  color: red;
+}
+
+#submit {
+  color: hsl(0,100%,50%);
+}
+
+#submit:hover {
+  background-color: hsl(0,50%,70%);
+  cursor: pointer;
+}
+
+@media only screen and (max-width:400px)
+{
+  
+  *{
+    font-family: sans-serif;
+    font-size: 10px;
+  }
+  
+}
+
+#flex-price {
+  display: flex;
+}
+
+#flex-price img{
+  width: 50%;
+}
+
+#flex-price figure{
+  width: 70%;
+  backround-color: white;
+}
