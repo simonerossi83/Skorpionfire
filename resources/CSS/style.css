@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-text-color: #CEE7F3;
+  --main-text-color-hover: #FFF;
+  --main-bg-color: #204C61;
+  --about-bg-color: #77BAD9;
+  --portfolio-bg-color: #314D59;
+  --contact-bg-color: #5D90A8;
+  
+}
+/*-------------- GENERALI  --------------------------------*/ 
+body {
+  color: var(--main-text-color);
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--main-bg-color);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: color: var(--main-text-color);
+}
+
+a:visited {
+  color: color: var(--main-text-color);
+}
+
+a:hover {
+  color: var(--main-text-color-hover);
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  font-size: 3rem;
+}
+
+/*----------------   BARRA DEI MENU  --------------------*/
+nav {
+  grid-area: menu;
+  position: fixed;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+nav p {
+  transform: rotate(-90deg);
+}
+
+nav img {
+  width: 70px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+
+/*------------------------GRIGLIA PRINCIPALE CHE DIVIDE CONTENUTO E MENU-------------------------------*/
+#main-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: "menu content";
+}
+
+/*-------------------------  CORPO PRINCIPALE  DEL CONTENUTO -------------------------- */
+main {
+  grid-area: content;
+}
+
+/* -----------------   HOME PAGE  -------------------------*/
+
+#home {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  font-size: 3rem;
+}
+
+#home-CV {
+  grid-area: 1 / 1 / 3 / 4;
+  background-color:#204C61;
+  padding: 8% 18% 0 0 ;
+}
+
+#home-about {
+  grid-area: 1 / 3 / 4 / 5;
+  background-color: var(--about-bg-color);
+  padding: 15% 0 0 20% ;
+}
+
+#home-portfolio {
+  grid-area: 2 / 1 / 5 / 4;
+  background-color: var(--portfolio-bg-color);
+  padding: 20% 45% 0 0 ;
+}
+
+#home-contact {
+  grid-area: 3 / 2 / 5 / 5;
+  background-color: var(--contact-bg-color);
+  padding: 20% 0 0 0 ;
+}
+
+/*---------------HOME PAGE MEDIA QUERIES ---------------------------------*/
+
+@media screen and (max-width: 1475px)  {
+
+  #home {
+    font-size: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 1000px)  {
+
+  #home {
+    /*font-size: 2rem;*/
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: stretch;
+  align-items: stretch;
+  }
+
+  #home-CV {
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 0;
+    
+  }
+  
+  #home-about {
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 0;
+    
+  }
+  
+  #home-portfolio {
+    grid-area: 3 / 1 / 4 / 2;
+    padding: 0;
+    
+  }
+  
+  #home-contact {
+    grid-area: 4 / 1 / 5 / 2;
+    padding: 0;
+    
+  }
+
+}
+
+
+/*---------------------DIVIDER ----------------------------*/
+
+.divider {
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider svg {
+  position: relative;
+  display: block;
+  width: 210%;
+  height: 258px;
+}
+
+#divider2 svg {
+  width: 100%;
+  height: 258px;
+}
+
+#divider1 {
+  background-color: var(--portfolio-bg-color);
+}
+
+#divider2 {
+  background-color: var(--portfolio-bg-color);
+}
+
+#divider1 .shape-fill {
+  fill: var(--about-bg-color);
+}
+
+#divider2 .shape-fill {
+  fill: var(--contact-bg-color);
+}
+
+/*-------------------------ABOUT ME --------------------------*/
+#about-me {
+display: grid;
+grid-template-columns: 600px 1fr;
+align-items: center;
+background-color: var(--about-bg-color);
+}
+
+#chart {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#about-me p {
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: start;
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 30px;
+}
+
+#about-me-h1 {
+  background-color: var(--about-bg-color);
+}
+
+/*------------------ PORTFOLIO ----------------------------*/
+#my-works {
+  width: 100%;
+  /*padding: 0 2rem;*/
+  text-align: center;
+  background-color: var(--portfolio-bg-color);
+}
+
+.polaroid {
+  background-color:var(--about-bg-color);
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+}
+
+.polaroid > img{
+  max-width: 100%;
+  height: auto;
+}
+.item caption {
+  text-align: center;
+  line-height: 2em;
+}
+.item {
+  width: 30%;
+  display: inline-block;
+  margin-top: 2rem;
+  filter: grayscale(100%);
+  color: var(--main-bg-color);
+  font-size: 2rem;
+  transform: scale(0.8, 0.8) rotate(5deg);
+  transition: all 0.35s;
+}
+.item .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.item .polaroid:before {
+  transform: rotate(6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item:nth-of-type(4n+2) {
+  transform: scale(0.8, 0.8) rotate(-5deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+2) .polaroid:before {
+  transform: rotate(-6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+
+}
+.item:nth-of-type(4n+4) {
+  transform: scale(0.8, 0.8) rotate(3deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+4) .polaroid:before {
+  transform: rotate(4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item:nth-of-type(4n+3) {
+  transform: scale(0.8, 0.8) rotate(-3deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+3) .polaroid:before {
+  transform: rotate(-4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item:hover {
+  filter: none;
+  transform: scale(1, 1) rotate(0deg) !important;
+  transition: all 0.35s;
+}
+.item:hover .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transform: rotate(0deg);
+  height: 90%;
+  width: 90%;
+  bottom: 0%;
+  right: 5%;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+  transition: all 0.35s;
+}
+
+
+/*---------------------  CONTATTI -----------------------------*/
+#contact-me {
+  background-color: var(--contact-bg-color);
+}
+
+.contact-flex {
+  display: flex;
+  font-size: 4rem;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: 500px;
+  align-items: center;
+}
+
